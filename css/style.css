@@ -1,0 +1,170 @@
+:root{
+    --letra-gris: hsl(0, 0%, 50%);
+}
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+}
+
+img, picture, video, canvas, svg{
+    display: block;
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word; /* rompe o divide las palabras largas o las URL */
+}
+
+input, button, textarea, select{
+    font: inherit; /* fuente heredada de su entorno, aplicado a 'font-size', 'font-weight' y 'font-family' */
+}
+
+body {
+    line-height: 1.6;
+}
+
+h1{
+    width: fit-content;
+    margin: 20px auto 20px auto;
+}
+
+.lista{
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0;
+}
+
+.lista li{
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    color: var(--letra-gris);
+    transition: color 700ms;
+}
+
+.lista li::marker{
+    content: url(../imagenes/formulario-de-contacto.png);
+}
+
+.lista li:hover{
+    /* text-shadow: 3px 3px 8px #000; */
+    color: #000;
+}
+
+.lista li a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 0 20px 20px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input:not(input[type='password']) {
+    margin-bottom: 15px;
+}
+
+input,textarea,#provincias {
+    width: 92%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+textarea{
+    padding-right: 2rem;
+}
+
+input[type='password'] {
+    width: 92%;
+}
+
+#mensaje{
+    resize: none;
+}
+
+input:focus, textarea:focus{
+    background-color: lightblue;
+    border-radius: 6px;
+}
+
+.contenedor {
+    position: relative;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/*#buscador{
+    display: flex;
+}*/
+
+.bx,.bi{
+    position: absolute;
+    top: 5px;
+    right: 35px;
+}
+
+.bx{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.bi{
+    font-size: 1.5rem;
+    color:#577B99;
+}
+
+.bi-check{
+    font-size: 2rem;
+    color: transparent;
+    top: 0;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto 1.2rem auto;
+}
+
+.botones-contacto{
+    margin-top: 10rem;
+}
+
+button {
+    background-color: #577B99;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+button[type='submit']:hover {
+    background-color: green;
+}
+
+button[type='reset']:hover {
+    background-color: red;
+}
